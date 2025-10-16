@@ -4,7 +4,7 @@ from pyspark.sql.functions import col, collect_list, size, lit, when
 count = 0
 
 # 初始化 SparkSession
-spark = SparkSession.builder.appName("ConnectedComponents").getOrCreate()
+spark = SparkSession.builder.appName("ConnectedComponents").enableHiveSupport().getOrCreate()
 
 # 示例数据（替换为实际数据）
 data = [("A", "B"), ("B", "C"), ("D", "E"), ("F", "G"), ("G", "H"), ("I", "J")]
